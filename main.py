@@ -1,31 +1,21 @@
 import tkinter as tk
 
-# def hello(event):
-    # print("Hello World!")
 
 window = tk.Tk()
-window.title("My Window")
+window.title("Calculator App")
 window.geometry("600x400")
 
+num1 = tk.Label(text = "Enter 1st Number: ")
+num1.grid(column=0,row=0)
+num1Entry = tk.Entry()
+num1Entry.grid(column=1,row=0)
 
-mylabel = tk.Label(text = "Enter your name: ")
-mylabel.grid(column=0, row=0)
-myEntry = tk.Entry(window)
-myEntry.grid(column=1, row=0)
-# mylabel.pack(side=tk.TOP)
+num2 = tk.Label(text = "Enter 2nd Number: ")
+num2.grid(column=0,row=1)
+num2Entry = tk.Entry()
+num2Entry.grid(column=1,row=1)
 
-def inputData():
-    name = myEntry.get()
-    print("The username is " + name)
-
-myButton = tk.Button(window,text = "Submit", command = inputData)
-myButton.grid(column=0, row=1)
-
-# mylabel2 = tk.Label(text = "How are you?")
-# mylabel2.grid(column=1, row=1)
-
-# mybutton = tk.Button(window, text = "Click Me")
-# mybutton.grid(column=0, row=1)
-# mybutton.bind("<Button-1>", hello)
+button=tk.Button(window,text="Calculate Sum")
+button.grid(column=1,row=2)
 
 window.mainloop()
